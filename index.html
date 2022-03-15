@@ -8,5 +8,34 @@
   </head>
   <body>
     <h1>My Awesome Books</h1>
+    <section id="books-list">
+      <div id="display-book"></div>
+    </section>
+    <section id="add-books">
+      <form id="books-form">
+          <div class="form-field">
+            <label for="title"></label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter title"
+            />
+            <small></small>
+          </div>
+          <div class="form-field">
+            <label for="author"></label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="Email author"
+            />
+            <small></small>
+          </div>
+        <button type="submit" class="btn" id="add-book">Get in touch</button>
+      </form>
+    </section>
+    <script src="./js/app.js"></script>
   </body>
 </html>
