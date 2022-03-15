@@ -1,1 +1,11 @@
 /* All the lovely styling comes here */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
