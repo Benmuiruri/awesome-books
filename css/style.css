@@ -6,6 +6,12 @@ h1 {
 
 .book {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1em;
+}
+
+.line-break {
+  border: 1px solid gray;
+  margin: 0;
+  width: 30%;
 }
