@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Awesome Books</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script
+      src="https://kit.fontawesome.com/bc719f0ade.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>My Book Library</title>
   </head>
   <body>
-    <h1>My Awesome Books</h1>
-    <section id="books-list">
-      
-    </section>
-    <section id="add-books">
-      <form id="books-form">
-          <div class="form-field">
-            <label for="title"></label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              placeholder="Enter title"
-            />
-            <small></small>
-          </div>
-          <div class="form-field">
-            <label for="author"></label>
-            <input
-              type="text"
-              name="author"
-              id="author"
-              placeholder="Email author"
-            />
-            <small></small>
-          </div>
-        <button type="submit" class="btn" id="add-book">Get in touch</button>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fa-solid fa-book-open text-primary"></i>
+        <span class="text-primary">Book My Book Library</span>
+      </h1>
+      <form id="book-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="text" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="author">Author</label>
+          <input type="text" id="author" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Add Book
+        </button>
       </form>
-    </section>
-    <script src="./js/app.js"></script>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
