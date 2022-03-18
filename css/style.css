@@ -1,1 +1,17 @@
 /* All the lovely styling comes here */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.line-break {
+  border: 1px solid gray;
+  margin: 0;
+  width: 30%;
+}
