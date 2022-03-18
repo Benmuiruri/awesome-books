@@ -4,7 +4,7 @@
 
 > This is a repository for my Awesome Books project I built at Microverse. It is a website that you can use to keep track of your favorite books.
 > You can view your favorite books, add a new book to your favorite books list, and delete a book from your favorite books list.
-> Visit the [Live Link](#) to view the website.
+> Visit the [Live Link](https://benmuiruri.github.io/awesome-books/) to view the website.
 
 ## Built With
 
