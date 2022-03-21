@@ -11,10 +11,12 @@ displayBooks.addEventListener('click', () => {
   displayBooksSection.classList.remove('hide-content');
   addBookSection.classList.add('hide-content');
   contactSection.classList.add('hide-content');
+  contactSection.classList.remove('d-flex', 'flex-column', 'align-items-center');
 });
 addBook.addEventListener('click', () => {
   addBookSection.classList.remove('hide-content');
   contactSection.classList.add('hide-content');
+  contactSection.classList.remove('d-flex', 'flex-column', 'align-items-center');
   displayBooksSection.classList.add('hide-content');
 });
 contact.addEventListener('click', () => {
