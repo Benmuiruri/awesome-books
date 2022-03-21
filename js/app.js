@@ -1,6 +1,27 @@
-// Book Class: Represents a Book
-
 /* eslint-disable */
+
+const displayBooks = document.getElementById('display-book-link');
+const addBook = document.getElementById('add-new-book-link');
+const contact = document.getElementById('contact-link');
+const addBookSection = document.getElementById('add-book');
+const displayBooksSection = document.getElementById('book-library');
+const contactSection = document.getElementById('contact');
+
+displayBooks.addEventListener('click', () => {
+  displayBooksSection.classList.remove('hide-content');
+  addBookSection.classList.add('hide-content');
+  contactSection.classList.add('hide-content');
+});
+addBook.addEventListener('click', () => {
+  addBookSection.classList.remove('hide-content');
+  contactSection.classList.add('hide-content');
+  displayBooksSection.classList.add('hide-content');
+});
+contact.addEventListener('click', () => {
+  contactSection.classList.remove('hide-content');
+  displayBooksSection.classList.add('hide-content');
+  addBookSection.classList.add('hide-content');
+});
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
@@ -160,3 +181,5 @@ function time() {
 }
 
 setInterval(time, 1000);
+
+

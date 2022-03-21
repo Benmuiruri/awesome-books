@@ -18,21 +18,23 @@
       class="top border m-4 p-4 d-flex justify-content-between align-items-center"
     >
       <h1 class="display-4 text-center">
-        <i class="fa-solid fa-book-open text-primary"></i>
-        <span class="text-primary">My Book Library</span>
+        <a href="#" class="text-decoration-none"
+          ><i class="fa-solid fa-book-open text-primary"></i>
+          <span class="text-primary">My Book Library</span></a
+        >
       </h1>
       <ul class="list-inline nav-links">
-        <li class="list-inline-item">
+        <li class="list-inline-item" id="display-book-link">
           <a href="#books" class="text-decoration-none text-primary"
             >Available Books</a
           >
         </li>
-        <li class="list-inline-item">
+        <li class="list-inline-item" id="add-new-book-link">
           <a href="#add-book" class="text-decoration-none text-primary"
             >Add Book</a
           >
         </li>
-        <li class="list-inline-item">
+        <li class="list-inline-item" id="contact-link">
           <a href="#contact" class="text-decoration-none text-primary"
             >Contact</a
           >
@@ -66,7 +68,7 @@
       </form>
     </section>
 
-    <section id="books">
+    <section id="book-library">
       <table class="table table-striped mt-5">
         <thead>
           <tr>

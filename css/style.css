@@ -11,5 +11,6 @@ section {
   margin: 0 auto;
 }
 
-.current-date {
+.hide-content {
+  display: none;
 }
