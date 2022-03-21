@@ -14,3 +14,10 @@ section {
 .hide-content {
   display: none;
 }
+
+footer p {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
