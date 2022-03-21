@@ -1,6 +1,30 @@
-// Book Class: Represents a Book
-
 /* eslint-disable */
+
+const displayBooks = document.getElementById('display-book-link');
+const addBook = document.getElementById('add-new-book-link');
+const contact = document.getElementById('contact-link');
+const addBookSection = document.getElementById('add-book');
+const displayBooksSection = document.getElementById('book-library');
+const contactSection = document.getElementById('contact');
+
+displayBooks.addEventListener('click', () => {
+  displayBooksSection.classList.remove('hide-content');
+  addBookSection.classList.add('hide-content');
+  contactSection.classList.add('hide-content');
+  contactSection.classList.remove('d-flex', 'flex-column', 'align-items-center');
+});
+addBook.addEventListener('click', () => {
+  addBookSection.classList.remove('hide-content');
+  contactSection.classList.add('hide-content');
+  contactSection.classList.remove('d-flex', 'flex-column', 'align-items-center');
+  displayBooksSection.classList.add('hide-content');
+});
+contact.addEventListener('click', () => {
+  contactSection.classList.remove('hide-content');
+  contactSection.classList.add('d-flex', 'flex-column', 'align-items-center');
+  displayBooksSection.classList.add('hide-content');
+  addBookSection.classList.add('hide-content');
+});
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
@@ -43,7 +67,7 @@ class UI {
 
     // Remove alert after 3 sec
     setTimeout(() => {
-      document.querySelector('.alert').remove()
+      document.querySelector('.alert').remove();
     }, 2000);
   }
 
@@ -79,7 +103,7 @@ class Store {
 
     books.push(book);
 
-    localStorage.setItem('books', JSON.stringify(books))
+    localStorage.setItem('books', JSON.stringify(books));
   }
 
   static removeBook(isbn) {
@@ -87,7 +111,7 @@ class Store {
 
     books.forEach((book, index) => {
       if (book.isbn === isbn) {
-        books.splice(index, 1)
+        books.splice(index, 1);
       }
     });
 
@@ -108,7 +132,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
   // validate input
   if (title === '' || author === '' || isbn === '') {
-    UI.showAlert('Please fill in all fields', 'danger')
+    UI.showAlert('Please fill in all fields', 'danger');
   } else {
     // Instantiate Book
     const book = new Book(title, author, isbn);
@@ -121,7 +145,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     Store.addBook(book);
 
     // Show success message
-    UI.showAlert('Book Successfully added', 'success')
+    UI.showAlert('Book Successfully added', 'success');
 
     //clear input field
 
@@ -131,14 +155,34 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 // Event: Remove a Book
 document.querySelector('#book-list').addEventListener('click', (e) => {
-
   //Remove from UI
   UI.deleteBook(e.target);
 
-
-  // Remove Book from local storage 
+  // Remove Book from local storage
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
   // Show success message
   UI.showAlert('Book Successfully deleted', 'success');
 });
+
+// Display date 
+const timeBox = document.querySelector('#date');
+
+function time() {
+  const date = new Date();
+  const locale = navigator.language;
+  const options = {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: 'false',
+  };
+  timeBox.textContent = `${date.toLocaleTimeString(locale, options)}`;
+}
+
+setInterval(time, 1000);
+
+

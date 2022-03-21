@@ -1,17 +1,23 @@
 /* All the lovely styling comes here */
-h1 {
-  font-size: 2em;
-  font-weight: bold;
+
+.nav-links a {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
-.book {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+section {
+  width: 60%;
+  margin: 0 auto;
 }
 
-.line-break {
-  border: 1px solid gray;
-  margin: 0;
-  width: 30%;
+.hide-content {
+  display: none;
+}
+
+footer p {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
