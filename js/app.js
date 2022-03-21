@@ -19,6 +19,7 @@ addBook.addEventListener('click', () => {
 });
 contact.addEventListener('click', () => {
   contactSection.classList.remove('hide-content');
+  contactSection.classList.add('d-flex', 'flex-column', 'align-items-center');
   displayBooksSection.classList.add('hide-content');
   addBookSection.classList.add('hide-content');
 });
